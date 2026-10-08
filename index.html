@@ -3,9 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>Log in</title>
+
+
+
 </head>
-<body>
+<body class="w-full h-dvh overflow-x-hidden font-Noto bg-background ">
+
+    <header class="text-base text-center mx-auto hidden">Log in Page</header>
+    <main class="w-full h-full flex flex-col md:flex-row justify-center items-center">
+
+        <div class="container w-full lg:w-[90%] h-screen xl:h-150 xl:w-250 bg-background flex flex-col xl:flex-row rounded-xl border border-border shadow-xl shadow-border">
+
+            <!-- Left card of log in page -->
+
+            <div class="description-card  h-[20%] md:h-[25%] xl:h-full w-full xl:w-[50%] bg-school-blue  p-8 flex flex-col xl:rounded-tl-xl xl:rounded-bl-xl">
+
+                <!-- <svg class="arcs" viewBox="0 0 320 400" preserveAspectRatio="none"
+                        aria-hidden="true" fill="none" stroke="#fff"
+                        stroke-opacity="0.14" stroke-width="1">
+                        <path vector-effect="non-scaling-stroke" d="M110 0C250 50 300 220 280 400"/>
+                        <path vector-effect="non-scaling-stroke" d="M140 0C270 70 320 230 300 400"/>
+                        <path vector-effect="non-scaling-stroke" d="M170 0C290 90 340 240 320 400"/>
+                        <path vector-effect="non-scaling-stroke" d="M200 0C310 110 360 250 340 400"/>
+                </svg> -->
+
+                <div class="logo-container  flex  gap-x-10 ">
+
+                    <img src="./assets/school-emblem.png" class=" h-16 md:h-20" alt="school logo">
+
+                    <div class="divider w-0.5 h-16 md:h-20 bg-white"></div>
+
+                    <div class="app-logo_container w-full   h-16 md:h-20 font-Playfair flex flex-col justify-start  "><h2 class="text-base leading-none md:text-2xl text-white tracking-wider">DEN EN CHOFU </h2><span class="  text-sm md:text-base text-white tracking-wider">GAKUEN</span>
+
+                    <!-- <span class="text-xs font-Noto text-text-light tracking-wider mt-1">Attendance App</span> -->
+                    
+                    </div>
+
+                    
+
+                </div>
+
+                <div class=" hidden copy grow w-full xl:flex md:flex-col justify-center relative">
+
+
+                    <span class="h-1 w-20 bg-school-green-light mb-10"></span>
+
+                     <h2 class="text-5xl font-Playfair font-semibold text-white">
+
+                    Take <br>attendance <br> <span class="text-5xl font-Playfair text-school-green font-semibold"> in seconds! </span>  
+
+                </h2>
+
+                <img src="./assets/school-emblem.png" alt="" aria-hidden="true"
+     class="pointer-events-none absolute -bottom-16 -right-16 w-72 opacity-5">
+
+                <!-- <p class="copy absolute left-0 top-42 text-white max-w-[75%] ">Record attendance smartly, spot absences early, and keep paper registers in the past.</p> -->
+
+                <!--<ul class="flex flex-col gap-y-2">
+                    <li class="flex flex-row justify-items-center items-end gap-x-2 text-white"><i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg></i>Mark class attendance from your phone</li>
+
+                     <li class="flex flex-row justify-items-center items-end gap-x-2 text-white"><i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg></i>Absences reach the office instantly</li>
+                      <li class="flex flex-row justify-items-center items-end gap-x-2 text-white"><i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" /></svg></i>Avoid manual transfer and lengthy paperwork</li>
+                </ul>--> 
+
+                </div>
+
+
+               
+
+                
+
+                
+
+
+            </div>
+
+
+            <div class="login-form-container bg-background  h-full  lg:h-full w-full xl:margin-0 xl:w-[50%]  p-8 flex flex-col rounded-tr-xl rounded-br-xl">
+
+                <form id="log-in" action="" class="w-full max-w-150 mx-auto h-full flex flex-col gap-y-6  ">
+
+                    <h2 class="text-lg xl:text-xl text-school-green-dark font-bold font-Noto capitalize "> Welcome back. log in</h2>
+
+                                <!-- Email field -->
+
+                        <div class="email-input h-auto   w-full flex flex-col gap-y-2 ">
+
+
+
+                            <label for="email" class="text-sm text-school-blue-dark font-bold">Email</label>
+
+                            <div class="group relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"          stroke="currentColor" class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-school-blue group-focus-within:text-school-blue-dark pointer-events-none"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                </svg>
+
+                                <input type="email" id="email" class="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 text-base font-Noto focus:border-school-blue  focus:ring-school-blue/20 outline-none placeholder:font-Noto placeholder:text-xs text-text-primary" placeholder="Email address">
+
+                                
+                            </div>
+
+                            <span id="error-email" class=" hidden text-school-red text-xs font-Noto">*Invalid email</span>
+
+                            
+                            
+                        </div>
+
+                        
+
+
+
+                        <!-- Password Field -->
+
+
+                         <div class="password-input h-auto   w-full flex flex-col gap-y-2 ">
+
+
+
+                            <label for="password" class="text-sm text-school-blue-dark font-bold">Password</label>
+
+                            <div class="group relative ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-school-blue group-focus-within:text-school-blue-dark pointer-events-none">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg>
+
+
+                                <input type="password" id="password" class="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 text-base font-Noto focus:border-school-blue  focus:ring-school-blue/20 outline-none placeholder:font-Noto placeholder:text-xs text-text-primary" placeholder="Password">
+
+                              
+
+                            
+                            
+                            </div>
+
+                           <span id="error-password" class=" hidden text-school-red text-xs font-Noto">*Invalid or wrong password</span>
+                        </div>
+
+
+                        <div class="optionals h-5 w-full flex justify-between items-center">
+
+                           <div class="check-box flex justify-center items-center gap-x-1">
+
+                             <input type="checkbox" id="remember-me" class="accent-school-blue-deep cursor-pointer"><label for="remember-me" class="text-xs text-school-blue-dark font-semibold cursor-pointer"> Remember me</label>
+
+
+                           </div>
+
+                           <a href="#" class="text-xs text-school-green font-Noto hover:text-school-green-dark ">Forgotten password?</a>
+
+                            
+                        </div>
+
+                        <button type="submit" id="login-btn" class="w-full h-12 bg-school-blue hover:bg-school-blue-dark cursor-pointer text-white font-Noto hover:text-school-green-white rounded-md">Log in</button>
+
+
+                        <div class="alt-login w-full h-auto flex  justify-center items-center gap-x-2  ">
+
+                            <span class="w-[45%] h-0.5 bg-gray-200"></span> <h3 class="font-Noto text-xs text-school-blue-light ">or</h3><span class="w-[45%] h-0.5 bg-gray-200"></span>
+
+
+                        </div>
+
+                        <button type="submit" id="login-btn" class="w-full h-12 flex justify-center items-center gap-x-2 bg-school-blue   hover:bg-school-blue-dark cursor-pointer text-white font-Noto hover:text-school-green-white rounded-md"><svg class="w-5 h-5" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                             <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                                </svg>
+                                <span class="">Sign in with Google</span>
+                        </button>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </main>
+    <footer></footer>
     
 </body>
 </html>
