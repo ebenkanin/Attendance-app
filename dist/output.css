@@ -361,6 +361,12 @@
   .max-w-\[75\%\] {
     max-width: 75%;
   }
+  .max-w-\[90\%\] {
+    max-width: 90%;
+  }
+  .max-w-\[95\%\] {
+    max-width: 95%;
+  }
   .flex-grow {
     flex-grow: 1;
   }
@@ -641,6 +647,9 @@
     }
     .md\:h-\[25\%\] {
       height: 25%;
+    }
+    .md\:max-w-150 {
+      max-width: calc(var(--spacing) * 150);
     }
     .md\:flex-col {
       flex-direction: column;
