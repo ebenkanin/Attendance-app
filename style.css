@@ -1,0 +1,85 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+
+
+@import "tailwindcss";
+
+
+/*@theme{
+
+   
+    --color-main:   #0B1F33; 
+    --color-submain:#005A80;
+
+    --color-main-text:#C9A55C;
+
+
+
+
+}*/
+
+@theme {
+
+     --font-Noto: "Noto Sans JP", sans-serif;
+     --font-Playfair:"Playfair",serif;
+
+    /* Brand */
+    --color-school-blue: #123B5D;
+    --color-school-blue-dark: #0B2942;
+    --color-school-blue-deep: #071D2E;
+    --color-school-blue-light: #1B5B80;
+
+    /* Green */
+    --color-school-green: #2E7D5B;
+    --color-school-green-dark: #205C42;
+    --color-school-green-light: #4FA878;
+    --color-school-green-soft: #E7F4ED;
+
+    /* Red */
+    --color-school-red: #C7353F;
+    --color-school-red-dark: #9E2831;
+    --color-school-red-light: #E05A62;
+    --color-school-red-soft: #FBECEE;
+
+    /* Purple */
+    --color-school-purple: #63518C;
+    --color-school-purple-dark: #4B3B70;
+    --color-school-purple-light: #8473AB;
+    --color-school-purple-soft: #F0EDF7;
+
+    /* Backgrounds */
+    --color-background: #F7F8F6;
+    --color-white: #FFFFFF;
+    --color-soft-gray: #F1F4F5;
+
+    /* Text */
+    --color-text-primary: #17212B;
+    --color-text-secondary: #64727E;
+    --color-text-muted: #8A969F;
+    --color-text-light: #AFC2D0;
+
+    /* Borders */
+    --color-border: #E2E7EA;
+    --color-border-dark: #CBD4DA;
+
+    /* Status */
+    --color-warning: #C58B2A;
+}
+
+/* --#004563;*/
+.description-card {
+  position: relative;
+  overflow: hidden;
+  /*background: #005A80;*/
+}
+.arcs {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.brand-panel > *:not(.arcs) {
+  position: relative; /* keeps text above the lines */
+}
+
