@@ -714,6 +714,9 @@
     .xl\:max-h-140 {
       max-height: calc(var(--spacing) * 140);
     }
+    .xl\:min-h-0 {
+      min-height: 0px;
+    }
     .xl\:w-250 {
       width: calc(var(--spacing) * 250);
     }
