@@ -9,17 +9,8 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-50: oklch(97.1% 0.013 17.38);
-    --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-lime-300: oklch(89.7% 0.196 126.665);
     --color-green-300: oklch(87.1% 0.15 154.449);
-    --color-teal-200: oklch(91% 0.096 180.426);
-    --color-teal-300: oklch(85.5% 0.138 181.071);
     --color-blue-100: oklch(93.2% 0.032 255.585);
-    --color-slate-100: oklch(96.8% 0.007 247.896);
-    --color-slate-300: oklch(86.9% 0.022 252.894);
-    --color-slate-700: oklch(37.2% 0.044 257.287);
-    --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-black: #000;
@@ -48,7 +39,6 @@
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
-    --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,7 +54,6 @@
     --color-school-green-dark: #205C42;
     --color-school-green-light: #4FA878;
     --color-school-red: #C7353F;
-    --color-school-purple-soft: #F0EDF7;
     --color-background: #F7F8F6;
     --color-text-primary: #17212B;
     --color-text-secondary: #64727E;
@@ -233,6 +222,9 @@
   .relative {
     position: relative;
   }
+  .inset-x-0 {
+    inset-inline: 0px;
+  }
   .inset-y-0 {
     inset-block: 0px;
   }
@@ -245,8 +237,8 @@
   .top-1\/2 {
     top: calc(1 / 2 * 100%);
   }
-  .top-2 {
-    top: calc(var(--spacing) * 2);
+  .top-4 {
+    top: calc(var(--spacing) * 4);
   }
   .top-42 {
     top: calc(var(--spacing) * 42);
@@ -263,14 +255,8 @@
   .left-0 {
     left: 0px;
   }
-  .left-2 {
-    left: calc(var(--spacing) * 2);
-  }
   .left-3 {
     left: calc(var(--spacing) * 3);
-  }
-  .z-10 {
-    z-index: 10;
   }
   .z-20 {
     z-index: 20;
@@ -338,6 +324,9 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
   .h-\[20\%\] {
     height: 20%;
   }
@@ -386,14 +375,8 @@
   .w-\[45\%\] {
     width: 45%;
   }
-  .w-\[70\%\] {
-    width: 70%;
-  }
   .w-full {
     width: 100%;
-  }
-  .w-screen {
-    width: 100vw;
   }
   .max-w-150 {
     max-width: calc(var(--spacing) * 150);
@@ -406,6 +389,9 @@
   }
   .max-w-\[90\%\] {
     max-width: 90%;
+  }
+  .min-w-0 {
+    min-width: 0px;
   }
   .flex-1 {
     flex: 1;
@@ -473,9 +459,6 @@
   .gap-x-2 {
     column-gap: calc(var(--spacing) * 2);
   }
-  .gap-x-4 {
-    column-gap: calc(var(--spacing) * 4);
-  }
   .gap-x-10 {
     column-gap: calc(var(--spacing) * 10);
   }
@@ -487,9 +470,6 @@
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
-  }
-  .gap-y-8 {
-    row-gap: calc(var(--spacing) * 8);
   }
   .gap-y-10 {
     row-gap: calc(var(--spacing) * 10);
@@ -519,30 +499,14 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-t {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 1px;
-  }
   .border-border {
     border-color: var(--color-border);
-  }
-  .border-gray-50 {
-    border-color: var(--color-gray-50);
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
   .border-green-300 {
     border-color: var(--color-green-300);
-  }
-  .border-red-50 {
-    border-color: var(--color-red-50);
-  }
-  .border-school-blue {
-    border-color: var(--color-school-blue);
-  }
-  .border-school-purple-soft {
-    border-color: var(--color-school-purple-soft);
   }
   .bg-background {
     background-color: var(--color-background);
@@ -568,26 +532,20 @@
   .bg-school-blue-dark {
     background-color: var(--color-school-blue-dark);
   }
-  .bg-school-blue-light {
-    background-color: var(--color-school-blue-light);
-  }
   .bg-school-blue\/10 {
     background-color: color-mix(in srgb, #123B5D 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-school-blue) 10%, transparent);
     }
   }
+  .bg-school-green {
+    background-color: var(--color-school-green);
+  }
   .bg-school-green-light {
     background-color: var(--color-school-green-light);
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-white\/10 {
-    background-color: color-mix(in srgb, #FFFFFF 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
   }
   .object-cover {
     object-fit: cover;
@@ -603,6 +561,9 @@
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -622,8 +583,14 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
+  }
+  .pr-6 {
+    padding-right: calc(var(--spacing) * 6);
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
@@ -634,6 +601,9 @@
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
   }
+  .pl-16 {
+    padding-left: calc(var(--spacing) * 16);
+  }
   .text-center {
     text-align: center;
   }
@@ -642,9 +612,6 @@
   }
   .font-Playfair {
     font-family: var(--font-Playfair);
-  }
-  .font-\[font-Noto\] {
-    font-family: font-Noto;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -817,9 +784,6 @@
     content: var(--tw-content);
   }
   @media (hover: hover) {
-    .hover\:bg-\[\#27508F\]:hover {
-      background-color: #27508F;
-    }
     .hover\:bg-school-blue-dark:hover {
       background-color: var(--color-school-blue-dark);
     }
@@ -837,10 +801,6 @@
     .hover\:duration-150:hover {
       --tw-duration: 150ms;
       transition-duration: 150ms;
-    }
-    .hover\:ease-in:hover {
-      --tw-ease: var(--ease-in);
-      transition-timing-function: var(--ease-in);
     }
     .hover\:ease-in-out:hover {
       --tw-ease: var(--ease-in-out);
@@ -864,6 +824,9 @@
     outline-style: none;
   }
   @media (width >= 48rem) {
+    .md\:h-12 {
+      height: calc(var(--spacing) * 12);
+    }
     .md\:h-20 {
       height: calc(var(--spacing) * 20);
     }
@@ -872,9 +835,6 @@
     }
     .md\:w-16 {
       width: calc(var(--spacing) * 16);
-    }
-    .md\:w-20 {
-      width: calc(var(--spacing) * 20);
     }
     .md\:w-90 {
       width: calc(var(--spacing) * 90);
@@ -970,11 +930,8 @@
     .xl\:rounded-bl-xl {
       border-bottom-left-radius: var(--radius-xl);
     }
-    .xl\:p-4 {
-      padding: calc(var(--spacing) * 4);
-    }
-    .xl\:px-4 {
-      padding-inline: calc(var(--spacing) * 4);
+    .xl\:px-6 {
+      padding-inline: calc(var(--spacing) * 6);
     }
     .xl\:px-8 {
       padding-inline: calc(var(--spacing) * 8);
@@ -982,8 +939,8 @@
     .xl\:py-4 {
       padding-block: calc(var(--spacing) * 4);
     }
-    .xl\:pr-4 {
-      padding-right: calc(var(--spacing) * 4);
+    .xl\:pt-0 {
+      padding-top: 0px;
     }
     .xl\:pr-8 {
       padding-right: calc(var(--spacing) * 8);
@@ -1029,16 +986,20 @@
   height: 24px;
   transition: all 0.25s;
   position: relative;
+  display: block;
 }
 .hamburger-top, .hamburger-middle, .hamburger-bottom {
   position: absolute;
+  display: block;
   width: 24px;
-  height: 1.5px;
+  height: 2px;
   top: 0;
   left: 0;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+#close-btn .hamburger-top, #close-btn .hamburger-middle, #close-btn .hamburger-bottom {
   background: #fff;
-  transform: rotated(0);
-  transition: all 0.5s;
 }
 .hamburger-middle {
   transform: translateY(7px);
@@ -1053,7 +1014,7 @@
   transform: rotate(45deg) translateY(6px) translateX(6px);
 }
 .open .hamburger-middle {
-  display: none;
+  opacity: 0;
 }
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
@@ -1072,9 +1033,11 @@
     height: 1.5px;
     top: 0;
     left: 0;
-    background: #fff;
     transform: rotated(0);
     transition: all 0.5s;
+  }
+  #close-btn .hamburger-top, .hamburger-middle, .hamburger-bottom {
+    background: #fff;
   }
 }
 @property --tw-translate-x {
