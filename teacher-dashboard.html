@@ -25,9 +25,33 @@
     </div>
 
 
-    <aside id="side-nav" class="w-75 h-dvh fixed inset-y-0 left-0 transform -translate-x-full transition-transform duration-300 xl:relative xl:translate-x-0 flex flex-col bg-school-blue-dark z-20">
+    <aside id="side-nav" class="w-75 md:w-90 xl:w-100 h-dvh fixed inset-y-0 left-0 transform -translate-x-full transition-transform duration-300 xl:relative xl:translate-x-0 flex flex-col gap-y-4 bg-school-blue-dark z-20 px-5 xl:px-8 ">
 
-        <div class="hamburger-container absolute top-2 right-2 dismiss xl:hidden ">
+        
+
+        <div class="menu-list h-12 w-full flex-1  display flex justify-between items-center ">
+
+            <div class="logo-container w-12 h-12  mr-4">
+                    <img src="./assets/school-emblem.png" alt="logo" class="w-full h-full object-cover object-center">
+            </div>
+            
+            <div class="divider w-0.5 h-full bg-white mr-4"></div>
+
+            <div class="flex-1 flex flex-col justify-start items-start h-12 ">
+
+                <h2 class="text-sm font-Playfair  tracking-wider text-[#D8BC82]">DENENCHOFU 学園
+                </h2>
+                <h3 class="text-sm font-Playfair  tracking-wider text-[#D8BC82]">CLASSROLL</h3>
+
+            </div>
+
+            <!-- Close menu button -->
+
+            <div class="hamburger-container dismiss xl:hidden ">
+
+                
+
+
                 <button id="close-btn" type="button" class="z-40 hamburger  focus:outline-none w-12 h-12 open  " aria-label="close navigation menu">
                     <span class="hamburger-top md:w-16"></span>
                     <span class="hamburger-middle md:w-16"></span>
@@ -35,29 +59,81 @@
 
                 </button>
 
+
+
         </div>
 
-        <nav class="main-navbar h-full w-full border border-red-500">
+        </div>
 
-            <!-- <div class="nav-logo-container flex ">
-                <div class="w-16 h-16 emblem shrink-0 border border-teal-200">
-                    <img src="./assets/school-emblem.png" class="w-full h-full object-contain" alt="school logo">
-                </div>
+        <nav class="main-navbar relative before:content-[''] before:absolute before:top-0 before:left-0
+            before:w-full before:h-px
+            before:bg-[linear-gradient(to_right,transparent_0%,#F9FAFB_20%,#F9FAFB_80%,transparent_100%)] h-full w-full flex flex-col py-4 gap-y-6 xl:pr-8 xl:py-4">
 
-                <div class="app-logo">
-                    <h2 class="font-Playfair text-sm tracking-wider ">ClassRoll</h2>
-                </div>
-            </div> -->
+            <a href="#dashboard"  class="w-full h-12 py-1 flex  gap-x-2 justify-start items-center text-white font-Noto  text-sm rounded-lg hover:bg-white/10 focus:bg-[#27508F] transform hover:duration-150 hover:ease-in-out px-4">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                    </svg>
+                </i> Dashboard
+            </a>
+
+
+            <!-- Take attendance tab -->
+
             
+             <a href="#attendance"  class="w-full h-12 py-1 flex  gap-x-2 justify-start items-center text-white font-Noto text-sm rounded-lg hover:bg-white/10 focus:bg-[#27508F] transform hover:duration-150 hover:ease-in-out px-4">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+                    </svg>
 
-            
+                </i> Take attendance
+            </a>
+
+
+
+            <a href="#matrix"  class="w-full h-12 py-1 flex  gap-x-2 justify-start items-center text-white font-Noto text-sm rounded-lg hover:bg-white/10 focus:bg-[#27508F] transform hover:duration-150 hover:ease-in-out px-4 ">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+                    </svg>
+
+                </i> Register matrix
+            </a>
+
+
+             <a href="#roster"  class="w-full h-12 py-1 flex  gap-x-2 justify-start items-center text-white font-Noto text-sm             rounded-lg hover:bg-white/10 focus:bg-[#27508F] transform hover:duration-150 hover:ease-in-out px-4">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+                    </svg>
+
+                </i> Student roster
+            </a>
+
+
+            <!-- Seating charts -->
+
+             <a href="#seating"  class="w-full h-12 py-1 flex  gap-x-2 justify-start items-center text-white font-Noto text-sm             rounded-lg hover:bg-white/10 focus:bg-[#27508F] transform hover:duration-150 hover:ease-in-out px-4 ">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
+                    </svg>
+
+                </i> Seating chart
+            </a>
+
+
+
+
+
         </nav>
 
     </aside>
 
     <div class="main-container border border-green-300 flex-1">
 
-        <header>
+        <header class="px-6">
 
             
 
