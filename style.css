@@ -91,6 +91,7 @@
   transition: all 0.25s;
   position: relative;
   display: block;
+  
 
 }
 .hamburger-top,
@@ -157,12 +158,13 @@
 .hamburger-middle,
 .hamburger-bottom{
   position:absolute;
-  width: 36px;
+  width: 24px;
   height:1.5px;
   top:0;
   left:0;
   transform:rotated(0);
   transition:all 0.5s;
+  
 }
 
 
@@ -180,8 +182,8 @@
 
 
 #close-btn .hamburger-top,
-.hamburger-middle,
-.hamburger-bottom{
+#close-btn .hamburger-middle,
+#close-btn .hamburger-bottom{
   
   background:#fff;
   

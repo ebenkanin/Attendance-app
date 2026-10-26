@@ -25,7 +25,7 @@
     </div>
 
 
-    <aside id="side-nav" class="w-75 md:w-90 xl:w-100 h-dvh fixed inset-y-0 left-0 transform -translate-x-full transition-transform duration-300 xl:relative xl:translate-x-0 flex flex-col gap-y-4 bg-school-blue-dark z-20 px-5 xl:px-8 ">
+    <aside id="side-nav" class="w-75 md:w-80 xl:w-80 min-h-dvh fixed inset-y-0 left-0 transform -translate-x-full transition-transform duration-300 xl:relative xl:translate-x-0 flex flex-col gap-y-4 bg-school-blue-dark z-20 px-5 xl:px-8 ">
 
         
 
@@ -132,7 +132,7 @@
 
     </aside>
 
-    <div class="main-container border border-green-300 flex-1 flex flex-col px-2 gap-y-4 md:gap-y-8 items-center xl:px-6 min-w-0 pt-16 xl:pt-0 ">
+    <div class="main-container border min-h-full border-green-300 flex-1 flex flex-col px-2 gap-y-4 md:gap-y-8 items-center xl:px-6 min-w-0 pt-16 xl:pt-0 ">
 
         <header class="px-2 md:px-6 w-full h-20 md:h-40 rounded-lg  bg-school-green  flex justify-center items-center">
 
@@ -152,7 +152,7 @@
 
         </header>
 
-        <main class="w-full h-auto border border-border">
+        <main class="w-full h-auto min-h-dvh border border-border">
 
             <div class="banner-container w-full h-auto md:h-30 xl:h-40 border border-white py-4 grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-4 gap-4">
 
@@ -257,7 +257,82 @@
                 </div>
 
 
+                
+
+
                
+
+
+
+            </div>
+
+
+                        <!-- Schedule list -->
+
+            <div class="schedule-container w-full h-auto grow  flex flex-col gap-y-4">
+
+                <!-- schedule heading -->
+
+
+                <div class="schedule-heading h-8 md:h-10">
+
+                    <h4 class="capitalize font-Playfair text-school-blue-deep font-semibold text-[12px] md:text-base">today's schedule</h4>
+
+                </div>
+
+
+                <!-- Schedule item -->
+
+
+                <div class="schedule-item w-full h-20 border border-lime-400 flex gap-x-8 md:gap-x-20 xl:gap-x-100 relative">
+
+                    <div class="time h-full w-20 flex justify-start items-center ">
+
+                        <span id="" class="font-Noto start-time text-xs md:text-[12px] font-semibold text-school-blue-deep">8:40</span> - <span id="end-time"class="font-Noto text-xs md:text-[12px] font-semibold text-school-blue-deep">9:30</span>
+                    </div>
+
+
+                    <div id="" class="class-info flex flex-col gap-y-2 items-start justify-center">
+
+                        <div class="subject-info flex gap-x-2 justifify-center items-center">
+                            <span id="" class=" subject text-xs md:text-sm font-Noto font-semibold">Advanced Coding</span><span class="text-xs md:text-sm font-semibold ">J1 Ha</span> 
+
+                        </div>
+
+                        
+
+
+                        <div class="room-container flex gap-x-2 justify-start items-center">
+
+                            <span id="" class="classroom font-Noto text-[10px] text-text-muted">EB2</span>
+
+                            <span class="text-[10px] font-Noto text-text-muted flex items-center gap-x-1"><i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                            </svg>
+                            </i> 8</span>
+
+
+                        </div>
+
+
+                        <button type="button" class="font-Noto text-[10px] px-2 py-1 bg-blue-300 rounded-md md:hidden text-start">Take Attendance</button>
+
+
+                        
+
+
+                        
+
+
+                    </div>
+
+
+                    <button type="button" class="font-Noto text-[10px] px-2 py-1 bg-blue-300 rounded-md self-center shrink-0  hidden md:flex absolute right-10">Take Attendance</button>
+
+
+                </div>
+
+
 
 
 
