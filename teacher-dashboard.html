@@ -105,8 +105,9 @@
              <a href="#roster"  class="w-full h-12 py-1 flex  gap-x-2 justify-start items-center text-white font-Noto text-sm             rounded-lg hover:bg-white/10 focus:bg-[#27508F] transform hover:duration-150 hover:ease-in-out px-4">
                 <i>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
                     </svg>
+
 
                 </i> Student roster
             </a>
@@ -131,19 +132,136 @@
 
     </aside>
 
-    <div class="main-container border border-green-300 flex-1 flex flex-col px-2 items-center xl:px-6 min-w-0 pt-16 xl:pt-0">
+    <div class="main-container border border-green-300 flex-1 flex flex-col px-2 gap-y-4 md:gap-y-8 items-center xl:px-6 min-w-0 pt-16 xl:pt-0 ">
 
-        <header class="px-6 w-full h-50 rounded-lg  bg-school-green pl-16 pr-6">
+        <header class="px-2 md:px-6 w-full h-20 md:h-40 rounded-lg  bg-school-green  flex justify-center items-center">
 
-            
+            <div class="w-full h-20 md:h-30 flex flex-col gap-2 ">
 
-            
+                <div class="w-full flex justify-between items-start">
+                     <h2 class="text-base md:text-xl xl:text-3xl text-white font-Playfair">Good Morning <span id="honorific">Mr. </span><span id="user_firstname">Kanin</span></h2>
 
+                    <p id="current_date" class="text-sm text-gray-200 hidden md:block xl:tracking-widest font-Noto ">Tuesday, October 21st 2026.</p>
+
+                </div>
+
+                <p id="info-summary" class=" font-Noto text-[10px] md:text-base text-white">You have 3 classes today.</p>
+
+            </div>
 
 
         </header>
 
-        <main>
+        <main class="w-full h-auto border border-border">
+
+            <div class="banner-container w-full h-auto md:h-30 xl:h-40 border border-white py-4 grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-4 gap-4">
+
+
+                <!-- Today's classes -->
+
+                 <div id="no_of_classes_container" class="border border-border px-2 py-2 md:px-6  rounded-xl md:rounded-2xl  ">
+
+                    <div class="w-full h-6 flex justify-between items-center">
+                        <h4 class="text-xs font-Noto font-bold text-text-muted">Classes Today</h4>
+
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"         class="size-6 text-text-muted">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                            </svg>
+</i>
+                    </div>
+
+                    <span id="classes_today" class="text-[12px] md:text-2xl xl:text-5xl text-school-blue font-noto font-semibold">
+
+                        3
+
+                    </span>
+
+                </div>
+
+                <!-- Registers completed -->
+
+                <div id="registers-completed" class="border border-border p-2 rounded-xl md:rounded-2xl ">
+
+                    <div class="w-full h-6 flex justify-between items-center">
+                        <h4 class="text-xs font-Noto font-bold text-text-muted">Regs completed</h4>
+
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-text-muted">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+
+
+                        </i>
+                    </div>
+
+                    <span id="completed_registers" class="text-[12px] md:text-2xl xl:text-5xl text-school-blue font-Noto font-semibold">
+
+                        3
+
+                    </span><span class="text-[12px] md:text-3xl xl:text-5xl text-school-blue font-Noto font-semibold">/</span><span id="no_of_classes" class=" text-[12px] md:text-2xl xl:text-5xl text-school-blue font-Noto font-semibold">
+
+                        3
+
+                    </span>
+
+                </div>
+
+
+                <!--Attendance rate  -->
+
+                <div id="attendance-rate" class="border border-border p-2 rounded-xl md:rounded-2xl ">
+
+                    <div class="w-full h-6 flex justify-between items-center">
+                        <h4 class="text-xs font-Noto font-bold text-text-muted">Avg attendance</h4>
+
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"         class="size-6 text-text-muted">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                            </svg>
+
+                        </i>
+                    </div>
+
+                    <span id="avg_attendance" class="text-[12px] md:text-xl xl:text-5xl text-school-blue font-Noto font-semibold">
+
+                        97.8 %
+
+                    </span>
+
+                </div>
+
+
+                                                    <!-- Pending Tasks -->
+
+                <div id="pending-tasks-container" class="border border-border p-2  rounded-xl md:rounded-2xl">
+
+                    <div class="w-full h-6 flex justify-between items-center">
+                        <h4 class="text-xs font-Noto font-bold text-text-muted">Pending Tasks</h4>
+
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-text-muted">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                            </svg>
+
+
+                        </i>
+                    </div>
+
+                    <span id="pending_tasks" class="text-[12px] md:text-2xl xl:text-5xl text-school-blue font-semibold font-Noto">
+
+                        1
+
+                    </span>
+
+                </div>
+
+
+               
+
+
+
+            </div>
 
         </main>
 

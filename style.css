@@ -161,10 +161,23 @@
   height:1.5px;
   top:0;
   left:0;
-  
   transform:rotated(0);
   transition:all 0.5s;
 }
+
+
+#menu-btn .hamburger-middle{
+  
+  transform: translateY(7px);
+}
+
+#menu-btn .hamburger-bottom{
+  transform: translateY(14px);
+  
+}
+
+
+
 
 #close-btn .hamburger-top,
 .hamburger-middle,
