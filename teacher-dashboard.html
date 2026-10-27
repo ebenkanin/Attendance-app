@@ -284,18 +284,18 @@
                 <!-- Schedule item -->
 
 
-                <div class="schedule-item w-full h-20 border border-lime-400 flex gap-x-8 md:gap-x-20 xl:gap-x-100 relative">
+                <div class="schedule-item w-full h-20 border border-border shadow-xl shadow-border  flex gap-x-8 md:gap-x-20 xl:gap-x-100 relative group hover:bg-[#faf2e3] before:content-[''] before:absolute before:left-0 before:top-0 before:h-full before:w-1 hover:before:bg-[#d8b06c] before:rounded-bl-md md:pl-6 rounded-md  ">
 
-                    <div class="time h-full w-20 flex justify-start items-center ">
+                    <div class="time h-full w-20 flex justify-start items-center">
 
-                        <span id="" class="font-Noto start-time text-xs md:text-[12px] font-semibold text-school-blue-deep">8:40</span> - <span id="end-time"class="font-Noto text-xs md:text-[12px] font-semibold text-school-blue-deep">9:30</span>
+                        <span id="" class="font-Noto start-time text-xs md:text-base font-semibold text-school-blue-deep">8:40</span> - <span id="end-time"class="font-Noto text-xs md:text-base font-semibold text-school-blue-deep">9:30</span>
                     </div>
 
 
-                    <div id="" class="class-info flex flex-col gap-y-2 items-start justify-center">
+                    <div id="" class="class-info flex flex-col gap-y-2 items-start justify-center group-hover:bg-[#faf2e3]">
 
-                        <div class="subject-info flex gap-x-2 justifify-center items-center">
-                            <span id="" class=" subject text-xs md:text-sm font-Noto font-semibold">Advanced Coding</span><span class="text-xs md:text-sm font-semibold ">J1 Ha</span> 
+                        <div class="subject-info flex gap-x-2 justifify-center items-center ">
+                            <span id="" class=" subject text-xs md:text-base font-Noto font-semibold">Advanced Coding</span><span class="text-xs md:text-base font-semibold ">J1 Ha</span> 
 
                         </div>
 
@@ -304,9 +304,9 @@
 
                         <div class="room-container flex gap-x-2 justify-start items-center">
 
-                            <span id="" class="classroom font-Noto text-[10px] text-text-muted">EB2</span>
+                            <span id="" class="classroom font-Noto text-[12px] text-text-muted">EB2</span>
 
-                            <span class="text-[10px] font-Noto text-text-muted flex items-center gap-x-1"><i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+                            <span class="text-[14px] font-Noto text-text-muted flex items-center gap-x-1"><i><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
                             </svg>
                             </i> 8</span>
@@ -315,7 +315,7 @@
                         </div>
 
 
-                        <button type="button" class="font-Noto text-[10px] px-2 py-1 bg-blue-300 rounded-md md:hidden text-start">Take Attendance</button>
+                        <button type="button" class="font-Noto text-[10px] px-2 py-1  bg-blue-300 rounded-md md:hidden text-start">Take Attendance</button>
 
 
                         
@@ -327,7 +327,10 @@
                     </div>
 
 
-                    <button type="button" class="font-Noto text-[10px] px-2 py-1 bg-blue-300 rounded-md self-center shrink-0  hidden md:flex absolute right-10">Take Attendance</button>
+                    <button type="button" class="font-Noto text-[13px] px-2 py-2 bg-blue-300/50 rounded-lg self-center shrink-0  hidden md:flex absolute right-10 cursor-pointer  items-center ">Take Attendance <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+</svg>
+</button>
 
 
                 </div>
