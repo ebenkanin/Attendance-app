@@ -599,6 +599,12 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[\#102B3F\] {
+    background-color: #102B3F;
+  }
+  .bg-\[\#183C32\] {
+    background-color: #183C32;
+  }
   .bg-background {
     background-color: var(--color-background);
   }
@@ -928,8 +934,17 @@
   .focus\:border-school-blue:focus {
     border-color: var(--color-school-blue);
   }
+  .focus\:bg-\[\#2E7D5B\]:focus {
+    background-color: #2E7D5B;
+  }
+  .focus\:bg-\[\#2e7d5b\]:focus {
+    background-color: #2e7d5b;
+  }
   .focus\:bg-\[\#27508F\]:focus {
     background-color: #27508F;
+  }
+  .focus\:bg-school-green:focus {
+    background-color: var(--color-school-green);
   }
   .focus\:ring-school-blue\/20:focus {
     --tw-ring-color: color-mix(in srgb, #123B5D 20%, transparent);
