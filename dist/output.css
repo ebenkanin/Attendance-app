@@ -10,6 +10,7 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-200: oklch(88.5% 0.062 18.334);
     --color-lime-400: oklch(84.1% 0.238 128.85);
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-blue-100: oklch(93.2% 0.032 255.585);
@@ -359,6 +360,9 @@
   .max-h-120 {
     max-height: calc(var(--spacing) * 120);
   }
+  .min-h-24 {
+    min-height: calc(var(--spacing) * 24);
+  }
   .min-h-dvh {
     min-height: 100dvh;
   }
@@ -587,6 +591,9 @@
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
+  }
+  .bg-red-200 {
+    background-color: var(--color-red-200);
   }
   .bg-school-blue {
     background-color: var(--color-school-blue);
@@ -898,6 +905,9 @@
     .hover\:bg-\[\#faf2e3\]:hover {
       background-color: #faf2e3;
     }
+    .hover\:bg-school-blue:hover {
+      background-color: var(--color-school-blue);
+    }
     .hover\:bg-school-blue-dark:hover {
       background-color: var(--color-school-blue-dark);
     }
@@ -911,6 +921,9 @@
     }
     .hover\:text-school-green-dark:hover {
       color: var(--color-school-green-dark);
+    }
+    .hover\:text-white:hover {
+      color: var(--color-white);
     }
     .hover\:duration-150:hover {
       --tw-duration: 150ms;
