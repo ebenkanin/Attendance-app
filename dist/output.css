@@ -15,6 +15,7 @@
     --color-green-300: oklch(87.1% 0.15 154.449);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-black: #000;
@@ -816,6 +817,24 @@
       --tw-shadow-color: color-mix(in oklab, var(--color-border) var(--tw-shadow-alpha), transparent);
     }
   }
+  .shadow-slate-900 {
+    --tw-shadow-color: oklch(20.8% 0.042 265.755);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-slate-900) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-slate-900\/4 {
+    --tw-shadow-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 4%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-slate-900) 4%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
+  .shadow-slate-900\/\[0\.04\] {
+    --tw-shadow-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 4%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-slate-900) 4%, transparent) var(--tw-shadow-alpha), transparent);
+    }
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -927,6 +946,18 @@
     }
     .hover\:text-white:hover {
       color: var(--color-white);
+    }
+    .hover\:shadow-md:hover {
+      --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+    .hover\:shadow-slate-900\/\[0\.07\]:hover {
+      --tw-shadow-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 7.000000000000001%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:shadow-slate-900\/\[0\.07\]:hover {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-slate-900) 7.000000000000001%, transparent) var(--tw-shadow-alpha), transparent);
+      }
     }
     .hover\:duration-150:hover {
       --tw-duration: 150ms;
